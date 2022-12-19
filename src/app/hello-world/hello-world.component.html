@@ -1,0 +1,16 @@
+<p>hello-world works!</p>
+
+<button (click)="display()" [disabled]="isDisabled">Click Here</button>
+
+<br />
+<br />
+<br />
+<!-- <input type="text" (input)="handleInput($event)" />
+<br /><br /><br /> -->
+<input type="text" [(ngModel)]="name" />
+<p>{{ name }}</p>
+<!-- [disabled]="isDisabled" -->
+<!-- if hidden is true it makes the button disappear -->
+<!-- ()="x()" event binding []="x" property binding -->
+<!-- this is two way binding -->
+<!-- it can be done also with ngModel  -->

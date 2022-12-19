@@ -1,0 +1,6 @@
+<!-- <div *ngFor="let i of [1, 4, 9, 16]">selected number is: {{ i }}</div> -->
+<div *ngFor="let i of products; let i1 = index">
+  <p>{{ i1 }}</p>
+  {{ i.id }} {{ i.name }} {{ i.username }} {{ i.email }}
+  {{ i.department }}
+</div>
