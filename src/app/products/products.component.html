@@ -1,6 +1,24 @@
 <!-- <div *ngFor="let i of [1, 4, 9, 16]">selected number is: {{ i }}</div> -->
+
 <div *ngFor="let i of products; let i1 = index">
-  <p>{{ i1 }}</p>
-  {{ i.id }} {{ i.name }} {{ i.username }} {{ i.email }}
-  {{ i.department }}
+  <div
+    class="product-container"
+    [ngStyle]="{
+      backgroundColor: i.name === 'Subhash' ? '#e6ffe6' : '#ffc2b3'
+    }"
+  >
+    <p>{{ i1 + 1 }}</p>
+    <div [ngStyle]="{ color: i.name === 'Subhash' ? 'Green' : 'red' }">
+      {{ i.name }}
+    </div>
+    <div>{{ i.username }}</div>
+    <div>{{ i.email }}</div>
+    <div>{{ i.department }}</div>
+    <button *ngIf="i.id % 2 != 0; else notifyme" class="btn btn-primary">
+      Admit
+    </button>
+    <ng-template #notifyme>
+      <button class="btn btn-danger">Notify Me</button>
+    </ng-template>
+  </div>
 </div>
